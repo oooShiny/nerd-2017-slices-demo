@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override of an image.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the img tag.
+ * - style_name: (optional) The name of the image style applied.
+ *
+ * @see template_preprocess_image()
+ */
+#}
+
+{# Add responsive-img class to most images to make 'em responsive. #}
+{%
+	set classes = [
+	  'img-responsive',
+	]
+%}
+
+{# Print the img tag with its corresponding classes. #}
+<img{{ attributes.addClass(classes) }} />
